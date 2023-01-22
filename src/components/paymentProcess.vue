@@ -1,160 +1,222 @@
 <template>
-   
-
-   <link rel="stlysheet" href="style.css">
     <v-container>
-        <v-divider
-        ></v-divider>
-        <v-row>
-    <!-- <div class="card"></div>
-        <v-container-title>
-                <span class="text-h5">Documents</span>
-            </v-container-title> -->
+        <v-container class="ml-6" style="color: black; font-weight: bolder;">
+          <v-row class="mt-10">
 
+            <v-col cols="12" class="mt-10">
+              <v-container class="mt-10">
+                  <v-card height="800px">
+                    <v-card-title style="background-color: lightgray; font-weight: bolder;"
+                      class="py-3"
+                      
+                    >DOCUMENTS</v-card-title>
+                    <v-row>
+                      <v-col cols="3" class="text-no-wrap">
+                        <v-checkbox
+                      class="ma-2 pa-2"
+                      v-model="certificationLetterForm"
+                      :label="'Certification (Letter Form)'">
+                    </v-checkbox>
+                      </v-col>
+                      <v-col cols="3" class="text-no-wrap">
+                        <v-checkbox
+                      class="ma-2 pa-2"
+                      v-model="certificationAuthentication"
+                      :label="'Certification Authentication'"
+                      ></v-checkbox>
+                      </v-col>
+                      <v-col cols="3" class="text-no-wrap">
+                      <v-checkbox
+                      class="ma-2 pa-2"
+                      v-model="certificationGoodMoral"
+                      :label="'Certification Good Moral'"
+                      ></v-checkbox>
+                    </v-col>
+                    <v-col cols="3" class="text-no-wrap">
+                      <v-checkbox
+                      class="ma-2 pa-2"
+                      v-model="certificationOfCompletion"
+                      :label="'Certification of Completion'"
+                      ></v-checkbox>
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                      v-model="Diploma"
+                      :label="'Diploma'"
+                      ></v-checkbox>
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                      v-model="Ace"
+                      :label="'Ace Form'"
+                      ></v-checkbox>
+                    </v-col>
+                    <v-col cols="3" >
+                      <v-checkbox class="ma-2 pa-2"
+                      v-model="roForm"
+                      :label="'RO Form'"
+                      ></v-checkbox>  
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                        v-model="torNonEngineering"
+                        :label="'Transcript of Records (Non Engineering Graduate)'"
+                        >
+                      </v-checkbox>
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                        v-model="torEngineering"
+                        :label="'Transcript of Records (Engineering Graduates)'"
+                        ></v-checkbox>
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                        v-model="torPerPage"
+                        :label="'Transcript of Records per page (Non-Graduate, All Courses)'"
+                        ></v-checkbox>
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                        v-model="scannedPicture"
+                        :label="'Scanned Picture'"
+                        ></v-checkbox>
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                        v-model="certificateOfUnitsEarned"
+                        :label="'Certificate of Units Earned'"
+                        ></v-checkbox>  
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox
+                              class="ma-2 pa-2"
+                          v-model="certificationOfGraduation"
+                          :label="'Certification of Graduation'"
+                      ></v-checkbox>  
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox
+                    class="ma-2 pa-2"
+                    v-model="honorableDismissal"
+                    :label="'Honorable Dismissal'"
+                    ></v-checkbox>  
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox
+                    class="ma-2 pa-2"
+                    v-model="certificationOfNoId"
+                    :label="'Certification of No. ID'"
+                    ></v-checkbox>
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                    v-model="copyOfGrades"
+                    :label="`Copy of Grades Certificate of General Weighted Average (GWA)`"
+                    ></v-checkbox>
+                    </v-col>
+                    <!-- <v-col cols="3">
+                      
+                    <v-checkbox class="ma-2 pa-2"
+                    v-model="copyOfGrades"
+                    :label="`Copy of Grades Certificate of General Weighted Average (GWA)`"
+                    ></v-checkbox>
+                    </v-col> -->
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                    v-model="certificateOfNSTP"
+                    :label="'Certificate of NSTP Serial Number'"
+                    ></v-checkbox>
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                    v-model="certificateOfSubjectDescription"
+                    :label="'Certificate of Subject Description'"
+                    ></v-checkbox>
 
-        <v-col cols="6" >
-        <div d-flex >
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                    v-model="certificateOfEnrollment"
+                    :label="'Certificate of Enrollment/No Tuition Fee'"
+                    >
+                  </v-checkbox>
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                    v-model="certificateOfRegistration"
+                    :label="'Certificate of Registration'"
+                    ></v-checkbox>
+                    </v-col>
+                    <v-col cols="3">
+                      <v-checkbox class="ma-2 pa-2"
+                    v-model="others"
+                    :label="'Others (Please Specify)'"
+                    ></v-checkbox>  
+                    </v-col>
+                    <v-col cols="3">
+                      <div>
+                      <v-text-field 
+                      v-model="othersSpecify"
+                      clearable
+                      v-if="this.others == true"
+                      type="text" label="Please Specify" append
+                      
+                      required
 
-            <v-checkbox
-            class="ma-2 pa-2"
-        v-model="certificationLetterForm"
-        :label="'Certification (Letter Form)'"
-        
-        
-    ></v-checkbox>
-        
-        <v-checkbox
-        class="ma-2 pa-2"
-        v-model="certificationAuthentication"
-        :label="'Certification Authentication'"
-        ></v-checkbox>
-        
-        <v-checkbox
-        class="ma-2 pa-2"
-        v-model="certificationGoodMoral"
-        :label="'Certification Good Moral'"
-        ></v-checkbox>
+                      ></v-text-field>
+                      
+                      </div>
+                    </v-col>                  
+                    </v-row>
+                     </v-card>  
+                  
+                     
+                </v-container>
+            </v-col>
+          </v-row>
 
-        <v-checkbox
-        class="ma-2 pa-2"
-        v-model="certificationOfCompletion"
-        :label="'Certification of Completion'"
-        ></v-checkbox>
+<!-- ============================================= -->
+      <!-- BUTTON FOR SUBMIT TRANSACTION -->
 
-        <v-checkbox class="ma-2 pa-2"
-        v-model="Diploma"
-        :label="'Diploma'"
-        ></v-checkbox>
-
-        <v-checkbox class="ma-2 pa-2"
-        v-model="Ace"
-        :label="'Ace Form'"
-        ></v-checkbox>
-
-        <v-checkbox class="ma-2 pa-2"
-        v-model="roForm"
-        :label="'RO Form'"
-        ></v-checkbox>
-
-        
-        <v-checkbox class="ma-2 pa-2"
-        v-model="torNonEngineering"
-        :label="'Transcript of Records (Non Engineering Graduate)'"
-        >
-      </v-checkbox>
-        <v-checkbox class="ma-2 pa-2"
-        v-model="torEngineering"
-        :label="'Transcript of Records (Engineering Graduates)'"
-        ></v-checkbox>
-        <v-checkbox class="ma-2 pa-2"
-        v-model="torPerPage"
-        :label="'Transcript of Records per page (Non-Graduate, All Courses)'"
-        ></v-checkbox>
-        <v-checkbox class="ma-2 pa-2"
-        v-model="scannedPicture"
-        :label="'Scanned Picture'"
-        ></v-checkbox>
-        <v-checkbox class="ma-2 pa-2"
-        v-model="certificateOfUnitsEarned"
-        :label="'Certificate of Units Earned'"
-        ></v-checkbox>    
-        </div>        
-        </v-col>
-        <v-col cols="6" >
-        <div d-flex >
-            <v-checkbox
-            class="ma-2 pa-2"
-        v-model="certificationOfGraduation"
-        :label="'Certification of Graduation'"
-    ></v-checkbox>        
-        <v-checkbox
-        class="ma-2 pa-2"
-        v-model="honorableDismissal"
-        :label="'Honorable Dismissal'"
-        ></v-checkbox>
-        
-        <v-checkbox
-        class="ma-2 pa-2"
-        v-model="certificationOfNoId"
-        :label="'Certification of No. ID'"
-        ></v-checkbox>
-
-        <v-checkbox class="ma-2 pa-2"
-        v-model="copyOfGrades"
-        :label="`Copy of Grades Certificate of General Weighted Average (GWA)`"
-        ></v-checkbox>
-
-        <v-checkbox class="ma-2 pa-2"
-        v-model="certificateOfNSTP"
-        :label="'Certificate of NSTP Serial Number'"
-        ></v-checkbox>
-
-        <v-checkbox class="ma-2 pa-2"
-        v-model="certificateOfSubjectDescription"
-        :label="'Certificate of Subject Description'"
-        ></v-checkbox>
-
-        
-        <v-checkbox class="ma-2 pa-2"
-        v-model="certificateOfEnrollment"
-        :label="'Certificate of Enrollment/No Tuition Fee'"
-        >
-      </v-checkbox>
-        <v-checkbox class="ma-2 pa-2"
-        v-model="certificateOfRegistration"
-        :label="'Certificate of Registration'"
-        ></v-checkbox>
-        <v-checkbox class="ma-2 pa-2"
-        v-model="others"
-        :label="'Others (Please Specify)'"
-        ></v-checkbox>    
-        </div>        
-        </v-col>        
-        </v-row>
-        <v-row>
-        <div>
-            <v-btn
-       
-      color="purple-darken-2"
       
-            v-model="submit"
+
+          <v-row>
+              <v-col cols="4"></v-col>
+             <v-col cols="4"> 
+            </v-col>
+            <v-col cols="4">
+
+              <div>
+            <v-btn
+            style="color:white"
+            size="large"
+            width="100%"
+            color="#8a0f24"      
+            v-model="submit"          
+            :disabled="submitDisabled"
             @click="submitButton()"
             variant="flat"
             position="right"            
             >            
-        Submit Total
-        </v-btn>
-        </div>
+            P R O C E E D
+             </v-btn>
+            </div>
+            </v-col>
+
         </v-row>    
+        </v-container>       
   </v-container>
 
-  <v-container>
 
+
+  <!-- ============================================= -->
+  <!-- THIS IS OPEN DIALOG CONTAINER - TRANSACTION -->
+  <v-container>
     <template>
       <v-row justify="center">
     <v-dialog
-      v-model="resultDialog"
-      
+      v-model="resultDialog"      
       width="1200"
       max-height="auto"
       :scrim="false"
@@ -182,14 +244,12 @@
             <v-icon>mdi-close</v-icon>
           </v-btn>
           <v-toolbar-title 
-          style="font-weight: bolder;"
-          
+          style="font-weight: bolder;"      
           >Transaction Review</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items>
             <v-btn
           style="font-weight: bolder;"
-
               variant="text"
               @click="saveTransaction()"
             >
@@ -199,15 +259,11 @@
         </v-toolbar>
         <v-row>
           <v-col cols="">    <v-list-item
-         
           style="font-weight: bolder;"
-
          v-for="item in transactionChecked"
          :key="item.title"
          :title="item.title"         
         >
-        <!-- <v-list-subheader>DOCUMENTS</v-list-subheader> -->
-        
       </v-list-item></v-col>
           <v-col cols="2" > <v-list-item
         
@@ -215,19 +271,9 @@
          :key="item.title"         
          :subtitle="'P '+ item.value"
         >
-        <!-- <v-list-subheader>DOCUMENTS</v-list-subheader> -->
-        
       </v-list-item></v-col>
         </v-row>
-    
-     
-      
-       
       </v-card>
-
-
-  
-
     </v-dialog>
   </v-row>
   </template>
@@ -238,14 +284,16 @@
 
   
   <script >
+import { isHTMLTag } from '@vue/shared'
+
     //
     export default {
     computed: {
       
     },
     data :()=> {
-        
       return {
+    
         dialogLoading:false,
         resultDialog:false,
         certificationLetterFormVal:0,
@@ -291,12 +339,28 @@
         others:false,
         othersVal:0,
         submit:false,
+        submitDisabled:false,
         sumProduct: 0,
         transactionChecked: [],
+        othersSpecify: "Others",
       }
     },
     watch:{
-        },
+    others(){
+      this.othersSpecify = "Others"
+      
+
+        }
+    },
+    // othersSpecify(){
+    //     if (this.othersSpecify) {
+    //       this.submitDisabled = false          
+    //     }else{
+    //       this.submitDisabled = true          
+
+    //     }
+    // }
+        // },
     methods:{
      submitButton(){
 
@@ -508,7 +572,7 @@
         if(this.others == true){
            this.othersVal= 0
            this.transactionChecked.push({
-          title: 'Others',
+          title: this.othersSpecify,
           value: 0,
         }) 
         }else{
@@ -555,6 +619,7 @@
       this.torNonEngineering= false
       this.roForm= false
       this.Diploma= false
+      this.othersSpecify=null
       this.certificationOfCompletion= false
       this.transactionChecked= []
     },
@@ -580,6 +645,7 @@
       this.torNonEngineering= false
       this.roForm= false
       this.Diploma= false
+      this.othersSpecify=null
       this.certificationOfCompletion= false
       this.transactionChecked= []
     },
