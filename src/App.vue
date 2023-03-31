@@ -9,11 +9,12 @@
 
 <script setup>
   import Payment from '@/components/paymentProcess.vue'
+  // import Payment from '@/components/payment.vue'
 </script>
 
 <style lang="css">
 main{
-  background-image: url(./assets/BG-header.jpg);
+  background-image: url(./assets/BG.jpg);
   background-size: 100%;
   background-color: #f1f1f1;
 }
