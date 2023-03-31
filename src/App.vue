@@ -9,7 +9,6 @@
 
 <script setup>
   import Payment from '@/components/paymentProcess.vue'
-  // import Payment from '@/components/payment.vue'
 </script>
 
 <style lang="css">
