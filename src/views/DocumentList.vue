@@ -213,7 +213,9 @@ export default {
   methods: {
     submitButton() {
       this.resultDialog = false;
-      const sumProd = this.prod1Val + this.prod4Val;
+
+      const sumProd = this.prod1Val + this.prod3Val;
+
       this.sumProduct = sumProd;
       console.log(sumProd);
     },
