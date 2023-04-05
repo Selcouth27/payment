@@ -219,6 +219,7 @@ export default {
       this.sumProduct = sumProd;
       this.sumProductsOne = sumProd;
       console.log(sumProd);
+      console.log(sumProd + "Total");
     },
   },
 };
