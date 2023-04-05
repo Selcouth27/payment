@@ -217,7 +217,7 @@ export default {
       const sumProd = this.prod1Val + this.prod3Val;
 
       this.sumProduct = sumProd;
-      this.sumProduct0 = sumProd;
+      this.sumProductsOne = sumProd;
       console.log(sumProd);
     },
   },
