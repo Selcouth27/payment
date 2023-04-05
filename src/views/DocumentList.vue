@@ -218,8 +218,9 @@ export default {
 
       this.sumProduct = sumProd;
       this.sumProductsOne = sumProd;
+      this.sumProductsTwo = sumProd;
+      this.sumProductsThree = sumProd;
       console.log(sumProd);
-      console.log(sumProd + "Total");
     },
   },
 };
